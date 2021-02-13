@@ -1,4 +1,5 @@
-/// @desc 
+/// @desc Initialize level
+
 randomize()
 
 // Get the tile layer map id
@@ -18,6 +19,7 @@ var _steps = 400;
 
 var _direction_change_odds = 1;
 
+// Generating map -- determining what is floor
 repeat (_steps) 
 {
 	grid[# _controller_x, _controller_y] = FLOOR;
@@ -45,15 +47,41 @@ repeat (_steps)
 	}
 }
 
-// Placing tiles
-
+// Removing single walls
 for(var _y = 1; _y < height - 1; _y++) 
 {
 	for(var _x = 1; _x < width - 1; _x++)
 	{
-		if (grid[# _x, _y] == FLOOR) 
+		if (grid[# _x, _y] != FLOOR) 
 		{
-			tilemap_set(_wall_map_id, 1, _x, _y)
+			var _north_tile = grid[# _x, _y - 1] == VOID;
+			var _west_tile = grid[# _x - 1, _y] == VOID;
+			var _south_tile = grid[# _x, _y + 1] == VOID;
+			var _east_tile = grid[# _x + 1, _y] == VOID;
+			
+			var _tile_index = NORTH*_north_tile + WEST*_west_tile + EAST*_east_tile + SOUTH*_south_tile + 1;
+			if (_tile_index == 1) // Walls that are completly surrounded by floor are turned into floor
+			{
+				grid[# _x, _y] = FLOOR
+			}
+		}
+	}
+}
+
+// Placing tiles
+for(var _y = 1; _y < height - 1; _y++) 
+{
+	for(var _x = 1; _x < width - 1; _x++)
+	{
+		if (grid[# _x, _y] != FLOOR) 
+		{
+			var _north_tile = grid[# _x, _y - 1] == VOID;
+			var _west_tile = grid[# _x - 1, _y] == VOID;
+			var _south_tile = grid[# _x, _y + 1] == VOID;
+			var _east_tile = grid[# _x + 1, _y] == VOID;
+			
+			var _tile_index = NORTH*_north_tile + WEST*_west_tile + EAST*_east_tile + SOUTH*_south_tile + 1;
+			tilemap_set(_wall_map_id, _tile_index, _x, _y)
 		}
 	}
 }
