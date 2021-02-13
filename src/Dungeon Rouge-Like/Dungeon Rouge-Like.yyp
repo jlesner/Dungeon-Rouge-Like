@@ -1,7 +1,10 @@
 {
   "resources": [
-    {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"spr_floor_background","path":"sprites/spr_floor_background/spr_floor_background.yy",},"order":0,},
+    {"id":{"name":"o_level","path":"objects/o_level/o_level.yy",},"order":0,},
+    {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":0,},
+    {"id":{"name":"t_floor","path":"tilesets/t_floor/t_floor.yy",},"order":0,},
+    {"id":{"name":"rm_1","path":"rooms/rm_1/rm_1.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
@@ -15,7 +18,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_1","path":"rooms/rm_1/rm_1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
