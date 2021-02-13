@@ -25,7 +25,8 @@ var _player_start_y  = _controller_y * CELL_HEIGHT + CELL_HEIGHT/2;
 instance_create_layer(_player_start_x, _player_start_y, "Instances", o_player);
 
 // Exit variables
-var _exit_chance = 50;
+
+var _possible_exits = ds_list_create();
 
 var _direction_change_odds = 1;
 
@@ -77,17 +78,39 @@ for(var _y = 1; _y < height - 1; _y++)
 		}
 		else // IF this is floor
 		{
-			// Adding Exit
+			// What are possible exits?
 			var _exit_x = _x * CELL_WIDTH;
 			var _exit_y = _y * CELL_HEIGHT;
-			if (point_distance(_exit_x,_exit_y,_player_start_x,_player_start_y) > 100) && !instance_exists(o_levelexit)
+			var pos = [_player_start_x,_player_start_y];
+			if (point_distance(_exit_x,_exit_y,_player_start_x,_player_start_y) > 200)
 			{
-				show_debug_message("Exit created!")
-				instance_create_layer(_exit_x, _exit_y, "Instances", o_levelexit)
+				pos[0] = _exit_x;
+				pos[1] = _exit_y;
+				ds_list_add(_possible_exits,pos);
+				show_debug_message(string(pos))
 			}
 		}
 	}
 }
+
+ds_list_add(_possible_exits,[_player_start_x - CELL_WIDTH/2,_player_start_y - CELL_HEIGHT/2]);
+
+show_debug_message("ALL POSSIBLE EXITS");
+for(var i = 0; i < ds_list_size(_possible_exits); i++)
+{
+	show_debug_message(string(ds_list_find_value(_possible_exits,i)));
+}
+
+var _chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
+
+while(_chosen_pos == undefined) 
+{
+	_chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
+}
+
+show_debug_message("Exit created at: " + string(_chosen_pos));
+instance_create_layer(_chosen_pos[0], _chosen_pos[1], "Instances", o_levelexit)
+
 
 // Placing tiles
 for(var _y = 1; _y < height - 1; _y++) 
