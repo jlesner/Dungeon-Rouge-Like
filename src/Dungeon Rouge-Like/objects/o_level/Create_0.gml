@@ -22,7 +22,12 @@ var _steps = 400;
 // Create Player
 var _player_start_x = _controller_x * CELL_WIDTH + CELL_WIDTH/2;
 var _player_start_y  = _controller_y * CELL_HEIGHT + CELL_HEIGHT/2;
-instance_create_layer(_player_start_x, _player_start_y, "Instances", o_player);
+//instance_create_layer(_player_start_x, _player_start_y, "Instances", o_player);
+with(o_player)
+{
+	x = _player_start_x;
+	y = _player_start_y;
+}
 
 // Exit variables
 

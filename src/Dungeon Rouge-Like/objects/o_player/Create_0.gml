@@ -10,4 +10,7 @@ x_speed_fraction = 0;
 y_speed_fraction = 0;
 
 // Creates camera
-instance_create_layer(x,y, "Instances", o_camera);
+if(!instance_exists(o_camera))
+{
+	instance_create_layer(x,y, "Instances", o_camera);
+}
