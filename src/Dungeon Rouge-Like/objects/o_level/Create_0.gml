@@ -17,7 +17,7 @@ ds_grid_set_region(grid, 0, 0, width -1, height -1, VOID);
 var _controller_x = width div 2;
 var _controller_y = height div 2;
 var _controller_direction = irandom(3);
-var _steps = 400;
+var _steps = 400 * level_size_multiplier;
 
 // Create Player
 var _player_start_x = _controller_x * CELL_WIDTH + CELL_WIDTH/2;
@@ -32,6 +32,10 @@ with(o_player)
 // Exit variables
 
 var _possible_exits = ds_list_create();
+
+// Enemy variable 
+
+var _total_enemies = 0;
 
 var _direction_change_odds = 1;
 
@@ -84,36 +88,44 @@ for(var _y = 1; _y < height - 1; _y++)
 		else // IF this is floor
 		{
 			// What are possible exits?
-			var _exit_x = _x * CELL_WIDTH;
-			var _exit_y = _y * CELL_HEIGHT;
+			var xx = _x * CELL_WIDTH;
+			var yy = _y * CELL_HEIGHT;
 			var pos = [_player_start_x,_player_start_y];
-			if (point_distance(_exit_x,_exit_y,_player_start_x,_player_start_y) > 200)
+			if (point_distance(xx,yy,_player_start_x,_player_start_y) > 200)
 			{
-				pos[0] = _exit_x;
-				pos[1] = _exit_y;
+				pos[0] = xx;
+				pos[1] = yy;
 				ds_list_add(_possible_exits,pos);
-				show_debug_message(string(pos))
+				//show_debug_message(string(pos))
+			}
+			
+			// Spawing Enemies
+			xx = _x * CELL_WIDTH + CELL_WIDTH/2;
+			yy = _y * CELL_HEIGHT + CELL_HEIGHT/2;
+			if (point_distance(xx,yy,_player_start_x,_player_start_y) > 80) 
+			   && (irandom(enemy_spawn_odds) == enemy_spawn_odds)
+			   && (_total_enemies < enemy_spawn_cap)
+			{
+				instance_create_layer(xx, yy, "Instances", p_enemy);
+				_total_enemies++;
 			}
 		}
 	}
 }
 
+// Adding player position as a possible exit position 
 ds_list_add(_possible_exits,[_player_start_x - CELL_WIDTH/2,_player_start_y - CELL_HEIGHT/2]);
-
-show_debug_message("ALL POSSIBLE EXITS");
-for(var i = 0; i < ds_list_size(_possible_exits); i++)
-{
-	show_debug_message(string(ds_list_find_value(_possible_exits,i)));
-}
-
+//show_debug_message("ALL POSSIBLE EXITS");
+//for(var i = 0; i < ds_list_size(_possible_exits); i++)
+//{
+//	show_debug_message(string(ds_list_find_value(_possible_exits,i)));
+//}
 var _chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
-
-while(_chosen_pos == undefined) 
+while(_chosen_pos == undefined) // If position is undefined then choose a different one until not 
 {
 	_chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
 }
-
-show_debug_message("Exit created at: " + string(_chosen_pos));
+//show_debug_message("Exit created at: " + string(_chosen_pos));
 instance_create_layer(_chosen_pos[0], _chosen_pos[1], "Instances", o_levelexit)
 
 
