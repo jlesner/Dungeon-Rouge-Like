@@ -6,6 +6,15 @@ var _y_input = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 x_speed += _x_input * acceleration;
 y_speed += _y_input * acceleration;
 
+//reapply the fractions
+x_speed += x_speed_fraction;
+y_speed += y_speed_fraction;
+
+//store and remove the fractions
+x_speed_fraction = x_speed - (floor(abs(x_speed)) * sign(x_speed));
+x_speed -= x_speed_fraction;
+y_speed_fraction = y_speed - (floor(abs(y_speed)) * sign(y_speed));
+y_speed -= y_speed_fraction;
 
 // Cap the speed
 var _speed = point_distance(0, 0, x_speed, y_speed);
@@ -60,8 +69,6 @@ else if (x_speed < 0) // if we are colliding with the left
 		x_speed = 0;
 	}
 }
-
-
 
 y += y_speed;
 
