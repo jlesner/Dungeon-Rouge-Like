@@ -13,6 +13,10 @@ height = room_height div CELL_HEIGHT;
 grid = ds_grid_create(width, height);
 ds_grid_set_region(grid, 0, 0, width -1, height -1, VOID);
 
+// Create the pathfinding grid
+grid_path = mp_grid_create(0, 0, width, height, CELL_WIDTH, CELL_HEIGHT);
+
+
 // Create the controller
 var _controller_x = width div 2;
 var _controller_y = height div 2;
@@ -144,7 +148,7 @@ for(var _y = 1; _y < height - 1; _y++)
 			var _tile_index = NORTH*_north_tile + WEST*_west_tile + EAST*_east_tile + SOUTH*_south_tile + 1;
 			tilemap_set(_wall_map_id, _tile_index, _x, _y)
 			
-
+			mp_grid_add_cell(grid_path, _x, _y);
 		}
 	}
 }
