@@ -24,6 +24,8 @@ var _player_start_x = _controller_x * CELL_WIDTH + CELL_WIDTH/2;
 var _player_start_y  = _controller_y * CELL_HEIGHT + CELL_HEIGHT/2;
 instance_create_layer(_player_start_x, _player_start_y, "Instances", o_player);
 
+// Exit variables
+var _exit_chance = 50;
 
 var _direction_change_odds = 1;
 
@@ -73,6 +75,17 @@ for(var _y = 1; _y < height - 1; _y++)
 				grid[# _x, _y] = FLOOR
 			}
 		}
+		else // IF this is floor
+		{
+			// Adding Exit
+			var _exit_x = _x * CELL_WIDTH;
+			var _exit_y = _y * CELL_HEIGHT;
+			if (point_distance(_exit_x,_exit_y,_player_start_x,_player_start_y) > 100) && !instance_exists(o_levelexit)
+			{
+				show_debug_message("Exit created!")
+				instance_create_layer(_exit_x, _exit_y, "Instances", o_levelexit)
+			}
+		}
 	}
 }
 
@@ -90,6 +103,8 @@ for(var _y = 1; _y < height - 1; _y++)
 			
 			var _tile_index = NORTH*_north_tile + WEST*_west_tile + EAST*_east_tile + SOUTH*_south_tile + 1;
 			tilemap_set(_wall_map_id, _tile_index, _x, _y)
+			
+
 		}
 	}
 }
