@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},"order":3,},
     {"id":{"name":"t_walls","path":"tilesets/t_walls/t_walls.yy",},"order":0,},
     {"id":{"name":"o_level","path":"objects/o_level/o_level.yy",},"order":0,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":0,},
