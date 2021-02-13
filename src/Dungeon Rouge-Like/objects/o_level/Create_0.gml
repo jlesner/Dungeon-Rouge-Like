@@ -2,6 +2,8 @@
 
 randomize()
 
+shadow_surface = noone;
+
 // Get the tile layer map id
 var _wall_map_id = layer_tilemap_get_id("WallTiles");
 
@@ -9,7 +11,7 @@ var _wall_map_id = layer_tilemap_get_id("WallTiles");
 width = room_width div CELL_WIDTH;
 height = room_height div CELL_HEIGHT;
 grid = ds_grid_create(width, height);
-ds_grid_set_region(grid, 0, 0, width, height, VOID);
+ds_grid_set_region(grid, 0, 0, width -1, height -1, VOID);
 
 // Create the controller
 var _controller_x = width div 2;
