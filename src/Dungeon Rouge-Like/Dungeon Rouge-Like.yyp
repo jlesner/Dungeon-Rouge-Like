@@ -1,11 +1,11 @@
 {
   "resources": [
-    {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},"order":3,},
+    {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":3,},
     {"id":{"name":"t_walls","path":"tilesets/t_walls/t_walls.yy",},"order":0,},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":1,},
     {"id":{"name":"spr_shadow","path":"sprites/spr_shadow/spr_shadow.yy",},"order":5,},
     {"id":{"name":"o_level","path":"objects/o_level/o_level.yy",},"order":0,},
-    {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":3,},
+    {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"order":3,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":0,},
     {"id":{"name":"GridPlaceMeeting","path":"scripts/GridPlaceMeeting/GridPlaceMeeting.yy",},"order":1,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":2,},
