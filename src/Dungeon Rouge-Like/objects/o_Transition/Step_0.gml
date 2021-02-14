@@ -8,10 +8,10 @@ if (mode != TRANS_MODE.OFF)
 	}
 	else // Closing
 	{
-		percent = min(1.2, percent + max(((1.2 - percent)/ 10), 0.005));
+		percent = min(1.5, percent + max(((1.5 - percent)/ 10), 0.005));
 	}
 	
-	if (percent == 1.2 || percent == 0) 
+	if (percent == 1.5 || percent == 0) 
 	{
 		switch (mode)
 		{
@@ -22,11 +22,7 @@ if (mode != TRANS_MODE.OFF)
 			}
 		case TRANS_MODE.NEXT:
 			{
-				mode = TRANS_MODE.INTRO;
-				break;
-			}
-		case TRANS_MODE.GOTO:
-			{
+				room_restart();
 				mode = TRANS_MODE.INTRO;
 				break;
 			}
