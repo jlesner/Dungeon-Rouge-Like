@@ -39,7 +39,8 @@ var _possible_exits = ds_list_create();
 
 // Enemy variable 
 
-var _total_enemies = 0;
+total_enemies = 0;
+
 
 var _direction_change_odds = 1;
 
@@ -116,10 +117,10 @@ for(var _y = 1; _y < height - 1; _y++)
 			yy = _y * CELL_HEIGHT + CELL_HEIGHT/2;
 			if (point_distance(xx,yy,_player_start_x,_player_start_y) > 80) 
 			   && (irandom(enemy_spawn_odds) == enemy_spawn_odds)
-			   && (_total_enemies < enemy_spawn_cap)
+			   && (total_enemies < enemy_spawn_cap)
 			{
 				instance_create_layer(xx, yy, "Enemies", o_slime);
-				_total_enemies++;
+				total_enemies++;
 			}
 		}
 	}
