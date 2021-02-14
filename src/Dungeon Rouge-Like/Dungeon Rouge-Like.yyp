@@ -31,6 +31,7 @@
     {"id":{"name":"spr_floor_tile","path":"sprites/spr_floor_tile/spr_floor_tile.yy",},"order":0,},
     {"id":{"name":"spr_wall_tiles","path":"sprites/spr_wall_tiles/spr_wall_tiles.yy",},"order":1,},
     {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"order":10,},
+    {"id":{"name":"snd_bg_music","path":"sounds/snd_bg_music/snd_bg_music.yy",},"order":1,},
     {"id":{"name":"spr_player_shadow","path":"sprites/spr_player_shadow/spr_player_shadow.yy",},"order":4,},
     {"id":{"name":"GetPathToPlayer","path":"scripts/GetPathToPlayer/GetPathToPlayer.yy",},"order":3,},
     {"id":{"name":"snd_shot_pew","path":"sounds/snd_shot_pew/snd_shot_pew.yy",},"order":0,},
