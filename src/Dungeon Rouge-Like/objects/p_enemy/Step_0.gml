@@ -1,7 +1,18 @@
 /// @desc
+
+_enemy_facing = point_direction(x,y,o_player.x,o_player.y)
+if (_enemy_facing > 90 && _enemy_facing < 270)
+{
+	image_xscale = -1;
+}
+else
+{
+	image_xscale = 1;
+}
+
 if(total_HP <= 0)
 {
-	instance_destroy();
+	instance_change(o_dead,true);
 	exit;
 }
 

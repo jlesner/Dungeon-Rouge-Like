@@ -1,2 +1,2 @@
-/// @desc Move towards player
-//alarm[0] = room_speed;
+/// @desc
+//speed += 8
