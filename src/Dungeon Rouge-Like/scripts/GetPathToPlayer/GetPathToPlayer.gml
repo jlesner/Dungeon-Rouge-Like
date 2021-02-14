@@ -1,4 +1,4 @@
-function GetPathToPlayer(){
+function GetPathToPlayer(_speed){
 	if(instance_exists(o_player)) 
 	{
 		var xx = o_player.x;
@@ -6,7 +6,7 @@ function GetPathToPlayer(){
 		
 		if (mp_grid_path(o_level.grid_path,path,x,y,xx,yy,true))
 		{
-			path_start(path, 2, path_action_stop,false);
+			path_start(path, _speed, path_action_stop,false);
 		}
 	}
 }

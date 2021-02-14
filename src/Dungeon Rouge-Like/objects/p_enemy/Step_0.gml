@@ -1,2 +1,2 @@
 /// @desc
-GetPathToPlayer();
+GetPathToPlayer(enemy_speed);
