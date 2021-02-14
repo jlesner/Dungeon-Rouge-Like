@@ -3,6 +3,6 @@ if(exit_ready)
 {
 	with(o_level)
 	{
-		room_restart();
+		SlideTransition(TRANS_MODE.NEXT);
 	}
 }
