@@ -1,5 +1,4 @@
-/// @description Destroy map and grid of last level
+/// @description Destroy previous maps
 
 ds_grid_destroy(grid);
-mp_grid_destroy(grid_path);
 surface_free(shadow_surface);
