@@ -18,6 +18,8 @@ healthbar_height = 24;
 healthbar_x = (display_get_gui_width()/2) - (healthbar_width*1.5); 
 healthbar_y = display_get_gui_height() - (4*healthbar_height)
 
+text_offset = 2;
+
 // Creates camera
 if(!instance_exists(o_camera))
 {
