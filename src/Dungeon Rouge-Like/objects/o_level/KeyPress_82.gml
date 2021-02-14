@@ -1,2 +1,2 @@
 /// @desc Restart 
-room_restart();
+SlideTransition(TRANS_MODE.NEXT);
