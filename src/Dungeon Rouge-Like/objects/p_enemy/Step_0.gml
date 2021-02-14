@@ -15,6 +15,7 @@ if instance_exists(o_player)
 	{
 		GetPathToPlayer(enemy_speed);
 	}
+	
 }
 
 if(total_HP <= 0)
