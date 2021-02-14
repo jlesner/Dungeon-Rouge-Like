@@ -11,7 +11,7 @@ enum TRANS_MODE
 {
 	OFF,
 	NEXT,
-	END,
+	GOTO,
 	RESTART,
 	INTRO
 }

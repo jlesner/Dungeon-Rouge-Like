@@ -18,7 +18,6 @@
     {"id":{"name":"SlideTransition","path":"scripts/SlideTransition/SlideTransition.yy",},"order":3,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":2,},
     {"id":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"order":7,},
-    {"id":{"name":"rm_2","path":"rooms/rm_2/rm_2.yy",},"order":1,},
     {"id":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"order":5,},
     {"id":{"name":"o_dead","path":"objects/o_dead/o_dead.yy",},"order":9,},
     {"id":{"name":"spr_hit_spark","path":"sprites/spr_hit_spark/spr_hit_spark.yy",},"order":9,},
@@ -52,7 +51,6 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_1","path":"rooms/rm_1/rm_1.yy",},},
-    {"roomId":{"name":"rm_2","path":"rooms/rm_2/rm_2.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
