@@ -89,7 +89,15 @@ for(var _y = 1; _y < height - 1; _y++)
 				grid[# _x, _y] = FLOOR
 			}
 		}
-		else // IF this is floor
+	}
+}
+
+// Spawing entities
+for(var _y = 1; _y < height - 1; _y++) 
+{
+	for(var _x = 1; _x < width - 1; _x++)
+	{
+		if(grid[# _x, _y] == FLOOR) // IF this is floor
 		{
 			// What are possible exits?
 			var xx = _x * CELL_WIDTH;
@@ -119,17 +127,11 @@ for(var _y = 1; _y < height - 1; _y++)
 
 // Adding player position as a possible exit position 
 ds_list_add(_possible_exits,[_player_start_x - CELL_WIDTH/2,_player_start_y - CELL_HEIGHT/2]);
-//show_debug_message("ALL POSSIBLE EXITS");
-//for(var i = 0; i < ds_list_size(_possible_exits); i++)
-//{
-//	show_debug_message(string(ds_list_find_value(_possible_exits,i)));
-//}
 var _chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
 while(_chosen_pos == undefined) // If position is undefined then choose a different one until not 
 {
 	_chosen_pos = ds_list_find_value(_possible_exits,irandom(ds_list_size(_possible_exits)));
 }
-//show_debug_message("Exit created at: " + string(_chosen_pos));
 instance_create_layer(_chosen_pos[0], _chosen_pos[1], "Instances", o_levelexit)
 
 
