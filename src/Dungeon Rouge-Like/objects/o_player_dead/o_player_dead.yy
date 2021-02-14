@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_slime_die",
-    "path": "sprites/spr_slime_die/spr_slime_die.yy",
+    "name": "spr_player_die",
+    "path": "sprites/spr_player_die/spr_player_die.yy",
   },
   "solid": false,
   "visible": true,
