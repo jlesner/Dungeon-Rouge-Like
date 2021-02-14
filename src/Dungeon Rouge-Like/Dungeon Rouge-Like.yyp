@@ -8,6 +8,7 @@
     {"id":{"name":"o_level","path":"objects/o_level/o_level.yy",},"order":0,},
     {"id":{"name":"o_slime","path":"objects/o_slime/o_slime.yy",},"order":8,},
     {"id":{"name":"o_wand","path":"objects/o_wand/o_wand.yy",},"order":4,},
+    {"id":{"name":"o_player_dead","path":"objects/o_player_dead/o_player_dead.yy",},"order":10,},
     {"id":{"name":"ScreenShake","path":"scripts/ScreenShake/ScreenShake.yy",},"order":2,},
     {"id":{"name":"o_Transition","path":"objects/o_Transition/o_Transition.yy",},"order":7,},
     {"id":{"name":"sh_white","path":"shaders/sh_white/sh_white.yy",},"order":0,},

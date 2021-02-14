@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_slime",
-    "path": "sprites/spr_slime/spr_slime.yy",
+    "name": "spr_slime_die",
+    "path": "sprites/spr_slime_die/spr_slime_die.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "p_enemy",
-    "path": "objects/p_enemy/p_enemy.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_player_dead","path":"objects/o_player_dead/o_player_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_player_dead","path":"objects/o_player_dead/o_player_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_slime",
+  "name": "o_player_dead",
   "tags": [],
   "resourceType": "GMObject",
 }
