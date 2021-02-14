@@ -1,2 +1,2 @@
 /// @desc Restart
-SlideTransition(TRANS_MODE.NEXT);
+SlideTransition(TRANS_MODE.RESTART);
