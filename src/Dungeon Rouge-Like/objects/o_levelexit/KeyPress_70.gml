@@ -1,4 +1,4 @@
 /// @desc
 
-image_blend = c_blue; 
+image_index = 1;
 exit_ready = true;
