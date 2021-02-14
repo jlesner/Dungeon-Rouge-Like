@@ -34,8 +34,14 @@ if (mode != TRANS_MODE.OFF)
 		case TRANS_MODE.END:
 			{
 				mode = TRANS_MODE.INTRO;
-				show_debug_message(room_exists(rm_2))
 				room_goto(rm_2);
+				break;
+			}
+		case TRANS_MODE.START:
+			{
+				mode = TRANS_MODE.INTRO;
+				show_debug_message(room_exists(rm_1));
+				room_goto(rm_1);
 				break;
 			}
 		}
