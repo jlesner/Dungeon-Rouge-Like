@@ -1,2 +1,2 @@
-/// @desc Execute State Machine
+/// @desc
 GetPathToPlayer();
