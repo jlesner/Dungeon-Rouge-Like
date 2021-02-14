@@ -15,6 +15,7 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_357D9AA9","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_replay","path":"objects/o_replay/o_replay.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.768319,"scaleY":0.768319,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":101.0,"y":132.0,"resourceVersion":"1.0","name":"inst_170869F7","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"assets":[
         {"spriteId":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"headPosition":-1.0,"rotation":0.0,"scaleX":5.153847,"scaleY":4.0,"animationSpeed":1.2,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":128.0,"resourceVersion":"1.0","name":"graphic_5190E4CB","tags":[],"resourceType":"GMRSpriteGraphic",},
@@ -22,6 +23,7 @@
         {"spriteId":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"headPosition":1.0,"rotation":0.0,"scaleX":5.153847,"scaleY":4.0,"animationSpeed":0.9,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":94.0,"y":135.0,"resourceVersion":"1.0","name":"graphic_370E1232","tags":[],"resourceType":"GMRSpriteGraphic",},
         {"spriteId":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":-4.692306,"scaleY":4.0,"animationSpeed":0.9,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":230.0,"y":138.0,"resourceVersion":"1.0","name":"graphic_AD5C631","tags":[],"resourceType":"GMRSpriteGraphic",},
         {"spriteId":{"name":"spr_player_die","path":"sprites/spr_player_die/spr_player_die.yy",},"headPosition":-1.0,"rotation":0.0,"scaleX":3.0,"scaleY":3.0,"animationSpeed":0.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":128.0,"resourceVersion":"1.0","name":"graphic_77400FF9","tags":[],"resourceType":"GMRSpriteGraphic",},
+        {"spriteId":{"name":"spr_Thank_you","path":"sprites/spr_Thank_you/spr_Thank_you.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":0.596874952,"scaleY":0.596874952,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":87.0,"y":5.0,"resourceVersion":"1.0","name":"graphic_59345E4B","tags":[],"resourceType":"GMRSpriteGraphic",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Assets_1","tags":[],"resourceType":"GMRAssetLayer",},
     {"spriteId":null,"colour":4284900966,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":10.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -30,6 +32,7 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_357D9AA9","path":"rooms/rm_2/rm_2.yy",},
+    {"name":"inst_170869F7","path":"rooms/rm_2/rm_2.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
