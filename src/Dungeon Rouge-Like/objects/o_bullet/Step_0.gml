@@ -7,7 +7,7 @@ var _collision = GridPlaceMeeting(self, o_level.grid);
 
 if (_collision && image_index != 0)
 {
-	show_debug_message("hi!")
+	//show_debug_message("hi!")
 	while (GridPlaceMeeting(self, o_level.grid))
 	{
 		x -= lengthdir_x(1, direction);
