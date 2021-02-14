@@ -14,6 +14,7 @@ if (mouse_check_button(mb_left) && (firing_delay < 0))
 	recoil = 2.5;
 	firing_delay = 20;
 	ScreenShake(0.75, 5);
+	audio_play_sound(snd_shot_pew,6,false);
 	with (instance_create_layer(x,y,"Bullets", o_bullet)) // create a bullet
 	{
 		spd = 3; // constant speed

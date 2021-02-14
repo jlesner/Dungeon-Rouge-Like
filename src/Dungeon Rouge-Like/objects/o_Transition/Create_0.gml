@@ -1,5 +1,7 @@
 /// @desc Size variables and mod setup
 
+audio_play_sound(snd_bg_music,2,true);
+
 w = display_get_gui_width();
 h = display_get_gui_height();
 
