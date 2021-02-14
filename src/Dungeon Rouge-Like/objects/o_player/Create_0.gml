@@ -9,6 +9,9 @@ acceleration = 0.5;
 x_speed_fraction = 0;
 y_speed_fraction = 0;
 
+current_HP = player_HP;
+
+player_flash = 0;
 
 // Creates camera
 if(!instance_exists(o_camera))

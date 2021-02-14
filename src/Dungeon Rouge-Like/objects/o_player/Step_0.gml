@@ -1,5 +1,10 @@
 /// @description Insert description here
-
+if (current_HP <= 0) 
+{
+	instance_change(o_player_dead,true);
+	instance_destroy(o_wand);
+	exit;
+}
 var _x_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _y_input = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
