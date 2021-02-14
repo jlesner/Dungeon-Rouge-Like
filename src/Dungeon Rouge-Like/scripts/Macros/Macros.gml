@@ -8,3 +8,14 @@
 #macro WEST 2
 #macro EAST 4
 #macro SOUTH 8
+
+enum ENEMYSTATE
+{
+	IDLE,
+	WANDER,
+	ATTACK,
+	CHASE,
+	HURT,
+	DIE,
+	WAIT
+}
