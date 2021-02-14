@@ -16,6 +16,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":3,},
     {"id":{"name":"p_enemy","path":"objects/p_enemy/p_enemy.yy",},"order":7,},
     {"id":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"order":5,},
+    {"id":{"name":"o_dead","path":"objects/o_dead/o_dead.yy",},"order":9,},
     {"id":{"name":"spr_hit_spark","path":"sprites/spr_hit_spark/spr_hit_spark.yy",},"order":9,},
     {"id":{"name":"Macros","path":"scripts/Macros/Macros.yy",},"order":0,},
     {"id":{"name":"GridPlaceMeeting","path":"scripts/GridPlaceMeeting/GridPlaceMeeting.yy",},"order":1,},
