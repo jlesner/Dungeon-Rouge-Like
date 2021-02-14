@@ -110,7 +110,7 @@ for(var _y = 1; _y < height - 1; _y++)
 			   && (irandom(enemy_spawn_odds) == enemy_spawn_odds)
 			   && (_total_enemies < enemy_spawn_cap)
 			{
-				instance_create_layer(xx, yy, "Instances", p_enemy);
+				instance_create_layer(xx, yy, "Enemies", o_slime);
 				_total_enemies++;
 			}
 		}
